@@ -18,29 +18,29 @@ def checkFrequencyEvenness(testDataCounter, testRange):
     return mostFrequentCount < (testRange // 2)
 
 
-class TestMaxZero(unittest.TestCase):
+class TestMaxTwo(unittest.TestCase):
     def setUp(self):
-        self.maxNum = 0
-        self.testRange = 10
+        self.maxNum = 2
+        self.testRange = 100
 
         self.testData = createTestData(self.maxNum, self.testRange)
         self.testDataCounter = CountTestData(self.testData)
 
     def testRangeSuccess(self):
-        self.assertTrue(max(self.testData) <= self.maxNum, "success")
+        self.assertTrue(max(self.testData) <= self.maxNum - 1, "success")
         self.assertTrue(min(self.testData) >= 0, "success")
 
 
 class TestMaxTen(unittest.TestCase):
     def setUp(self):
         self.maxNum = 10
-        self.testRange = 50
+        self.testRange = 100
 
         self.testData = createTestData(self.maxNum, self.testRange)
         self.testDataCounter = CountTestData(self.testData)
 
     def testRangeSuccess(self):
-        self.assertTrue(max(self.testData) <= self.maxNum, "success")
+        self.assertTrue(max(self.testData) <= self.maxNum - 1, "success")
         self.assertTrue(min(self.testData) >= 0, "success")
 
     def testRandomPercentSuccess(self):
@@ -56,7 +56,7 @@ class TestMaxHundred(unittest.TestCase):
         self.testDataCounter = CountTestData(self.testData)
 
     def testRangeSuccess(self):
-        self.assertTrue(max(self.testData) <= self.maxNum, "success")
+        self.assertTrue(max(self.testData) <= self.maxNum - 1, "success")
         self.assertTrue(min(self.testData) >= 0, "success")
 
     def testRandomPercentSuccess(self):
@@ -72,7 +72,7 @@ class TestMaxThousand(unittest.TestCase):
         self.testDataCounter = CountTestData(self.testData)
 
     def testRangeSuccess(self):
-        self.assertTrue(max(self.testData) <= self.maxNum, "success")
+        self.assertTrue(max(self.testData) <= self.maxNum - 1, "success")
         self.assertTrue(min(self.testData) >= 0, "success")
 
     def testRandomPercentSuccess(self):
